@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+ <html lang="ja">
+
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+     <!-- 自作のCSSファイルの読み込み  -->
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <title>固定ヘッダーの説明</title>
+ </head>
+
+ <body>
+     <!-- ヘッダーメニュー -->
+     <nav>
+         <div class="wrapper">
+             <ul>
+                 <li class="item"><a href="#about">About</a></li>
+                 <li class="item"><a href="#news">News</a></li>
+                 <li class="item"><a href="#blog">Blog</a></li>
+                 <li class="item"><a href="#contact">Contact</a></li>
+             </ul>
+         </div>
+     </nav>
+
+     <main>
+         <!-- aboutセクション -->
+         <section id="about">
+             <div class="wrapper">
+                 <h1>About</h1>
+                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                     テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+             </div>
+         </section>
+         <!-- newsセクション -->
+         <section id="news">
+             <div class="wrapper">
+                 <h1>News</h1>
+                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                     テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+             </div>
+         </section>
+         <!-- blogセクション -->
+         <section id="blog">
+             <div class="wrapper">
+                 <h1>Blog</h1>
+                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                     テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+             </div>
+         </section>
+         <!-- contactセクション -->
+         <section id="contact">
+             <div class="wrapper">
+                 <h1>Contact</h1>
+                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                     テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+             </div>
+         </section>
+     </main>
+
+     <!-- フッター -->
+     <footer>
+         <p>© 2023 pittolog</p>
+     </footer>
+
+     <!-- body直前でjQueryと自作のJSファイルの読み込み  -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+     <!-- 自作のJSファイル  -->
+     <script src="main.js"></script>
+ </body>
+
+ </html>
+
+
+
+ <style>
+ @charset "utf-8";
+
+*{
+    margin: 0;
+}
+
+/******* ヘッダーのスタイル ********/
+nav {
+    background: #fff;
+    width: 100%;
+}
+
+/* ヘッダーを固定させる */
+nav.fixed {
+    position: fixed;/*fixedで固定*/
+    right: 0;
+    top: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+nav ul {
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+}
+
+.item {
+    margin: 0 2em;
+    padding: 17px 0;
+    font-weight:bold;
+}
+
+.item a {
+    color: #48D1CC;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: #0000FF;
+}
+
+/******* ここから各セクションのスタイル ********/
+h1 {
+    font-size: 1.25rem;
+    padding: 2rem 0;
+    color: #48D1CC;
+    font-weight:bold;
+}
+
+p {
+    line-height: 2;
+    color: #555A60;
+}
+
+section{
+    background-color: #F0FFF0;
+    padding: 2em;
+}
+
+section .wrapper{
+    max-width: 800px;
+}
+
+/******* ここからフッターのスタイル ********/
+footer {
+    background-color: #4169E1;
+    padding:1em;
+}
+
+footer p {
+    font-size: .8em;
+    color: #fff;
+    max-width: 800px;
+    padding: 0;
+    text-align:center;
+    margin:0 auto;
+    font-weight:bold;
+}
+</style>
+
